@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wine: #7b2d3b;
+  --color-gold: #e0a458;
+  --color-cream: #fbf3e4;
+  --color-cocoa: #3a2a24;
+  --shadow-soft: 0 18px 48px rgb(58 42 36 / 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #fbf3e4;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family:
+    Pretendard,
+    "Noto Sans KR",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

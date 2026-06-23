@@ -1,1 +1,0 @@
-# KSYD_MBTI
