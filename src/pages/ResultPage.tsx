@@ -58,12 +58,27 @@ export function ResultPage() {
             {result.emoji}
           </span>
           <div>
-            <p className="text-sm font-black text-gold">{result.code}</p>
+            <p className="text-sm font-black text-gold">
+              {result.topKeyword} · {result.code}
+            </p>
             <h1 className="text-3xl font-black text-cocoa">{result.name}</h1>
           </div>
         </div>
         <p className="mt-5 text-lg font-bold leading-relaxed">{result.summary}</p>
         <p className="mt-5 leading-8 text-cocoa/78">{result.reflection}</p>
+
+        <div className="mt-6 space-y-4 border-y border-wine/10 py-5">
+          {result.interpretation.map((item) => (
+            <div key={item.title}>
+              <p className="font-black text-wine">{item.title}</p>
+              <p className="mt-1 text-sm leading-6 text-cocoa/78">{item.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 border-l-4 border-wine pl-4 text-sm font-bold leading-6 text-cocoa">
+          {result.oneLine}
+        </p>
 
         <div className="mt-6 rounded-lg bg-cream p-4">
           <p className="font-black text-wine">나눔 질문</p>

@@ -38,9 +38,15 @@ export interface Question {
 export interface ResultType {
   code: TypeCode;
   name: string;
+  topKeyword: string;
   summary: string;
   emoji: string;
   reflection: string;
+  interpretation: {
+    title: string;
+    body: string;
+  }[];
+  oneLine: string;
   reflectionQuestion: string;
 }
 
