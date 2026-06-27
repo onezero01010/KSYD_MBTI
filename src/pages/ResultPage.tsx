@@ -2,7 +2,7 @@ import { toPng } from "html-to-image";
 import { Download, RotateCcw, Share2 } from "lucide-react";
 import { useRef } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import { commonReflectionQuestions, resultMap } from "../data/results";
+import { resultMap } from "../data/results";
 import { isComplete } from "../lib/scoring";
 import { useQuiz } from "../state/useQuiz";
 import type { TypeCode } from "../types";
@@ -65,7 +65,11 @@ export function ResultPage() {
           </div>
         </div>
         <p className="mt-5 text-lg font-bold leading-relaxed">{result.summary}</p>
-        <p className="mt-5 leading-8 text-cocoa/78">{result.reflection}</p>
+        <div className="mt-5 space-y-3 leading-8 text-cocoa/78">
+          {result.description.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
 
         <div className="mt-6 space-y-4 border-y border-wine/10 py-5">
           {result.interpretation.map((item) => (
@@ -79,16 +83,6 @@ export function ResultPage() {
         <p className="mt-6 border-l-4 border-wine pl-4 text-sm font-bold leading-6 text-cocoa">
           {result.oneLine}
         </p>
-
-        <div className="mt-6 rounded-lg bg-cream p-4">
-          <p className="font-black text-wine">나눔 질문</p>
-          <ul className="mt-3 space-y-2 text-sm leading-6 text-cocoa/80">
-            <li>{result.reflectionQuestion}</li>
-            {commonReflectionQuestions.map((question) => (
-              <li key={question}>{question}</li>
-            ))}
-          </ul>
-        </div>
       </div>
 
       <p className="text-center text-sm text-cocoa/60">

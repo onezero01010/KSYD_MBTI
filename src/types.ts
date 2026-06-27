@@ -41,13 +41,12 @@ export interface ResultType {
   topKeyword: string;
   summary: string;
   emoji: string;
-  reflection: string;
+  description: string[];
   interpretation: {
     title: string;
     body: string;
   }[];
   oneLine: string;
-  reflectionQuestion: string;
 }
 
 export type Answers = Partial<Record<number, AnswerChoice>>;
