@@ -1,28 +1,7 @@
 import { ArrowLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const storySteps = [
-  {
-    id: "01",
-    title: "초대받다",
-    description: "성모님이 나를 잔치의 일꾼으로 부르셨어요.",
-  },
-  {
-    id: "02",
-    title: "알아차리다",
-    description: "잔치의 빈틈과 사람들의 마음을 살펴봅니다.",
-  },
-  {
-    id: "03",
-    title: "순명하다",
-    description: "그가 시키는 대로 하여라라는 말씀을 듣습니다.",
-  },
-  {
-    id: "04",
-    title: "발견하다",
-    description: "물이 포도주로 변하는 기적을 마주합니다.",
-  },
-];
+const canaWeddingImage = `${import.meta.env.BASE_URL}assets/worker-test/cana-wedding.png`;
 
 export function SituationPage() {
   return (
@@ -31,27 +10,16 @@ export function SituationPage() {
         <p className="text-sm font-bold text-wine">
           카나의 혼인잔치가 당신을 기다립니다
         </p>
-        <div className="mx-auto mt-5 flex aspect-[4/3] max-w-sm items-center justify-center rounded-lg border border-wine/15 bg-white shadow-soft">
-          <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg bg-linear-to-br from-white via-cream to-[#f9f7f2]">
-            <span className="absolute left-8 top-8 text-5xl" aria-hidden="true">
-              🏺
-            </span>
-            <span className="absolute right-9 top-10 text-4xl" aria-hidden="true">
-              🍷
-            </span>
-            <span
-              className="absolute bottom-8 left-1/2 -translate-x-1/2 text-6xl"
-              aria-hidden="true"
-            >
-              ✨
-            </span>
-          </div>
-        </div>
-        <h1 className="mt-6 text-3xl font-black leading-tight text-cocoa sm:text-4xl">
+        <h1 className="mt-4 text-3xl font-black leading-tight text-cocoa sm:text-4xl">
           성모님이 당신을
           <br />
           잔치의 일꾼으로 부르셨어요
         </h1>
+        <img
+          src={canaWeddingImage}
+          alt="카나의 혼인잔치에 모인 사람들과 항아리를 든 일꾼 일러스트"
+          className="mx-auto mt-5 w-full max-w-md object-contain drop-shadow-[0_18px_26px_rgba(58,42,36,0.14)]"
+        />
       </div>
 
       <div className="rounded-lg border border-wine/10 bg-white p-5 shadow-soft">
@@ -63,21 +31,6 @@ export function SituationPage() {
             그때 성모님은 당신을 바라보시며 잔치의 일꾼으로 초대하십니다.
           </p>
         </div>
-      </div>
-
-      <div className="grid gap-3 sm:grid-cols-2">
-        {storySteps.map((step) => (
-          <article
-            key={step.id}
-            className="rounded-lg border border-wine/10 bg-[#fffdf8] p-4"
-          >
-            <p className="text-xs font-black text-gold">{step.id}</p>
-            <h2 className="mt-1 text-lg font-black text-cocoa">{step.title}</h2>
-            <p className="mt-2 text-sm leading-6 text-cocoa/70">
-              {step.description}
-            </p>
-          </article>
-        ))}
       </div>
 
       <p className="text-center text-sm font-semibold leading-6 text-cocoa/65">
