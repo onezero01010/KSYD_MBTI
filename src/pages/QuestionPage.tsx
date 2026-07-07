@@ -60,9 +60,11 @@ export function QuestionPage() {
       </div>
 
       <div className="space-y-6">
-        <h1 className="text-2xl font-extrabold leading-snug text-cocoa sm:text-3xl">
-          {question.prompt}
-        </h1>
+        <div className="flex h-44 items-center sm:h-40">
+          <h1 className="text-2xl font-extrabold leading-snug text-cocoa sm:text-3xl">
+            {question.prompt}
+          </h1>
+        </div>
 
         <div className="grid gap-4">
           {[question.optionA, question.optionB].map((option) => {
@@ -72,7 +74,7 @@ export function QuestionPage() {
                 key={option.label}
                 type="button"
                 onClick={() => selectAnswer(option.label)}
-                className={`min-h-28 rounded-lg border p-5 text-left shadow-soft transition focus:outline-none focus:ring-4 focus:ring-gold/35 ${
+                className={`flex h-44 flex-col rounded-lg border p-5 text-left shadow-soft transition focus:outline-none focus:ring-4 focus:ring-gold/35 sm:h-40 ${
                   isSelected
                     ? "border-wine bg-wine text-white"
                     : "border-wine/15 bg-white hover:border-wine/45"
