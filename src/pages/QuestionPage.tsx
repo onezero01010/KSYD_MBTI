@@ -74,15 +74,12 @@ export function QuestionPage() {
                 key={option.label}
                 type="button"
                 onClick={() => selectAnswer(option.label)}
-                className={`flex h-44 flex-col rounded-lg border p-5 text-left shadow-soft transition focus:outline-none focus:ring-4 focus:ring-gold/35 sm:h-40 ${
+                className={`flex h-44 items-center rounded-lg border p-5 text-left shadow-soft transition focus:outline-none focus:ring-4 focus:ring-gold/35 sm:h-40 ${
                   isSelected
                     ? "border-wine bg-wine text-white"
                     : "border-wine/15 bg-white hover:border-wine/45"
                 }`}
               >
-                <span className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-black text-cocoa">
-                  {option.label}
-                </span>
                 <span className="block text-lg font-bold leading-relaxed">
                   {option.text}
                 </span>
