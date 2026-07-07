@@ -27,9 +27,7 @@ export function TypesPage() {
                 {result.emoji}
               </span>
               <div>
-                <p className="text-xs font-black text-gold">
-                  {result.topKeyword} · {result.code}
-                </p>
+                <p className="text-xs font-black text-gold">{result.topKeyword}</p>
                 <h2 className="text-xl font-black">{result.name}</h2>
               </div>
             </div>

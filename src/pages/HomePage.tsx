@@ -19,7 +19,7 @@ export function HomePage() {
           </h1>
           <p className="max-w-xl text-lg leading-relaxed text-cocoa/75">
             예상치 못한 자리 앞에서 나는 무엇을 알아차리고 어떻게 움직일까요?
-            12개의 질문으로 나의 봉사 자리와 일꾼 유형을 찾아봅니다.
+            12개의 질문으로 일꾼 유형을 찾아봅니다.
           </p>
         </div>
       </div>
@@ -38,12 +38,6 @@ export function HomePage() {
         >
           테스트 시작하기
           <ChevronRight aria-hidden="true" size={20} />
-        </Link>
-        <Link
-          to="/types"
-          className="inline-flex min-h-12 items-center justify-center rounded-md border border-wine/20 bg-white px-5 py-4 text-base font-bold text-wine transition hover:border-wine/45"
-        >
-          모든 유형 보기
         </Link>
       </div>
     </section>

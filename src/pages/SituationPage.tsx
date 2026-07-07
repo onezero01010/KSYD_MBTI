@@ -17,15 +17,6 @@ export function SituationPage() {
         </h1>
       </div>
 
-      <div className="rounded-lg border border-wine/10 bg-white p-5 shadow-soft">
-        <div className="space-y-4 leading-8 text-cocoa/78">
-          <p>오늘은 기쁜 혼인잔치가 열리는 날.</p>
-          <p>성모님은 당신을 잔치의 일꾼으로 초대하십니다. </p>
-          <p>사람들은 웃고, 잔은 채워지고, 집 안은 축하로 가득합니다.</p>
-          <p>그런데 잔치 한가운데에서 작은 빈틈이 조용히 드러나고 있어요...</p>
-        </div>
-      </div>
-
       <p className="text-center text-sm font-semibold leading-6 text-cocoa/65">
         정답은 없습니다. 당신답게 선택하면 됩니다.
       </p>
