@@ -112,7 +112,7 @@ export function ResultPage() {
           className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-wine/20 bg-white px-4 font-bold text-wine"
         >
           <Share2 aria-hidden="true" size={18} />
-          공유
+          테스트 공유
         </button>
         <Link
           to="/situation"
