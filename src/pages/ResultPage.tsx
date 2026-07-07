@@ -3,18 +3,28 @@ import { Download, RotateCcw, Share2 } from "lucide-react";
 import { useRef } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { resultMap } from "../data/results";
+import { getResultSlug, getTypeFromResultSlug } from "../lib/resultSlugs";
 import { isComplete } from "../lib/scoring";
 import { useQuiz } from "../state/useQuiz";
 import type { TypeCode } from "../types";
 
 export function ResultPage() {
   const cardRef = useRef<HTMLDivElement>(null);
-  const { typeCode } = useParams();
+  const { typeCode: resultParam } = useParams();
   const { answers, reset } = useQuiz();
-  const result = resultMap[typeCode as TypeCode];
+  const resolvedType = resultParam
+    ? getTypeFromResultSlug(resultParam) ?? (resultParam as TypeCode)
+    : undefined;
+  const shouldHideLegacyCode =
+    resolvedType && resultParam === resolvedType ? getResultSlug(resolvedType) : null;
+  const result = resolvedType ? resultMap[resolvedType] : undefined;
 
   if (!result) {
     return <Navigate to="/" replace />;
+  }
+
+  if (shouldHideLegacyCode) {
+    return <Navigate to={`/result/${shouldHideLegacyCode}`} replace />;
   }
 
   if (!isComplete(answers)) {
@@ -27,7 +37,7 @@ export function ResultPage() {
     }
     const dataUrl = await toPng(cardRef.current, { pixelRatio: 2 });
     const link = document.createElement("a");
-    link.download = `ksyd-${result.code}.png`;
+    link.download = `ksyd-${getResultSlug(result.code)}.png`;
     link.href = dataUrl;
     link.click();
   };
@@ -58,9 +68,7 @@ export function ResultPage() {
             {result.emoji}
           </span>
           <div>
-            <p className="text-sm font-black text-gold">
-              {result.topKeyword} · {result.code}
-            </p>
+            <p className="text-sm font-black text-gold">{result.topKeyword}</p>
             <h1 className="text-3xl font-black text-cocoa">{result.name}</h1>
           </div>
         </div>
