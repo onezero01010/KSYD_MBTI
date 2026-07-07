@@ -23,14 +23,14 @@ export function LoadingPage() {
   }
 
   return (
-    <section className="flex flex-1 flex-col items-center justify-center gap-6 text-center">
+    <section className="flex flex-1 flex-col items-center justify-center gap-4 text-center sm:gap-6">
       <div
-        className="h-16 w-16 animate-spin rounded-full border-4 border-gold border-t-wine"
+        className="h-12 w-12 animate-spin rounded-full border-4 border-gold border-t-wine sm:h-16 sm:w-16"
         aria-hidden="true"
       />
       <div className="space-y-2">
-        <h1 className="text-3xl font-black">분석 중...</h1>
-        <p className="text-cocoa/70">
+        <h1 className="text-2xl font-black sm:text-3xl">분석 중...</h1>
+        <p className="text-sm text-cocoa/70 sm:text-base">
           카나의 잔치 안에서 당신의 자리를 살펴보고 있어요.
         </p>
       </div>
