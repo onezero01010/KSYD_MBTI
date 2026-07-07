@@ -1,4 +1,4 @@
-import { ArrowLeft, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const canaWeddingImage = `${import.meta.env.BASE_URL}assets/worker-test/cana-wedding.png`;
@@ -34,13 +34,6 @@ export function SituationPage() {
         >
           일꾼으로 들어가기
           <ChevronRight aria-hidden="true" size={20} />
-        </Link>
-        <Link
-          to="/"
-          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-wine/20 bg-white px-5 py-3 text-base font-bold text-wine transition hover:border-wine/45 sm:min-h-12 sm:py-4"
-        >
-          <ArrowLeft aria-hidden="true" size={18} />
-          처음으로 돌아가기
         </Link>
       </div>
     </section>
