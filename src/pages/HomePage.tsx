@@ -2,6 +2,8 @@ import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useQuiz } from "../state/useQuiz";
 
+const workerTypeImage = `${import.meta.env.BASE_URL}assets/worker-test/worker-type-16.png`;
+
 export function HomePage() {
   const { reset } = useQuiz();
 
@@ -21,6 +23,12 @@ export function HomePage() {
           </p>
         </div>
       </div>
+
+      <img
+        src={workerTypeImage}
+        alt="카나의 혼인잔치 일꾼 유형 캐릭터 모음"
+        className="mx-auto w-full max-w-sm object-contain drop-shadow-[0_16px_22px_rgba(58,42,36,0.12)]"
+      />
 
       <div className="grid gap-3">
         <Link
