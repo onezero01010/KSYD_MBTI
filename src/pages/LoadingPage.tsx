@@ -28,8 +28,10 @@ export function LoadingPage() {
         aria-hidden="true"
       />
       <div className="space-y-2">
-        <h1 className="text-3xl font-black">분석중...</h1>
-        <p className="text-cocoa/70">카나의 잔치 안에서 당신의 자리를 살펴보고 있어요.</p>
+        <h1 className="text-3xl font-black">분석 중...</h1>
+        <p className="text-cocoa/70">
+          카나의 잔치 안에서 당신의 자리를 살펴보고 있어요.
+        </p>
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import { HomePage } from "./pages/HomePage";
 import { LoadingPage } from "./pages/LoadingPage";
 import { QuestionPage } from "./pages/QuestionPage";
 import { ResultPage } from "./pages/ResultPage";
+import { SituationPage } from "./pages/SituationPage";
 import { TypesPage } from "./pages/TypesPage";
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
+        <Route path="situation" element={<SituationPage />} />
         <Route path="q/:questionNumber" element={<QuestionPage />} />
         <Route path="loading" element={<LoadingPage />} />
         <Route path="result/:typeCode" element={<ResultPage />} />

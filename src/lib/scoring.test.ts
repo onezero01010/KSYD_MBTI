@@ -18,10 +18,10 @@ describe("scoreAnswers", () => {
   it("uses majority vote for each axis", () => {
     expect(
       scoreAnswers({
-        1: "B",
-        2: "A",
-        3: "B",
-        4: "A",
+        1: "A",
+        2: "B",
+        3: "A",
+        4: "B",
         5: "A",
         6: "B",
         7: "A",
@@ -32,5 +32,25 @@ describe("scoreAnswers", () => {
         12: "A",
       }),
     ).toBe("ENTP");
+  });
+
+  it("keeps the revised phase and dimension distribution", () => {
+    expect(questions.map((question) => question.phase)).toEqual([
+      1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3,
+    ]);
+    expect(questions.map((question) => question.dimension)).toEqual([
+      "EI",
+      "SN",
+      "EI",
+      "SN",
+      "TF",
+      "JP",
+      "SN",
+      "JP",
+      "TF",
+      "EI",
+      "TF",
+      "JP",
+    ]);
   });
 });

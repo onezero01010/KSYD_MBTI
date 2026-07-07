@@ -1,4 +1,4 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronRight } from "lucide-react";
 import { useMemo } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { questions } from "../data/questions";
@@ -22,15 +22,20 @@ export function QuestionPage() {
     return <Navigate to="/" replace />;
   }
 
+  const selected = answers[question.id];
+  const isLastQuestion = question.id === TOTAL_QUESTIONS;
+
   const selectAnswer = (choice: AnswerChoice) => {
     answerQuestion(question.id, choice);
-    const nextQuestion = question.id + 1;
-    window.setTimeout(() => {
-      navigate(nextQuestion > TOTAL_QUESTIONS ? "/loading" : `/q/${nextQuestion}`);
-    }, 180);
-  };
 
-  const selected = answers[question.id];
+    if (isLastQuestion) {
+      return;
+    }
+
+    window.setTimeout(() => {
+      navigate(`/q/${question.id + 1}`);
+    }, 220);
+  };
 
   return (
     <section className="flex flex-1 flex-col gap-8 py-3">
@@ -43,11 +48,18 @@ export function QuestionPage() {
         </div>
         <div className="h-2 overflow-hidden rounded-full bg-white">
           <div
-            className="h-full rounded-full bg-gold transition-all"
+            className="h-full rounded-full bg-[#25c96a] transition-all"
             style={{ width: `${progress}%` }}
           />
         </div>
-        <p className="text-sm font-semibold text-wine">{question.phaseTitle}</p>
+        <div className="space-y-1">
+          <p className="text-sm font-black text-wine">
+            Phase {question.phase}. {question.phaseTitle}
+          </p>
+          <p className="text-sm leading-6 text-cocoa/65">
+            {question.phaseSubtitle}
+          </p>
+        </div>
       </div>
 
       <div className="space-y-6">
@@ -79,6 +91,16 @@ export function QuestionPage() {
             );
           })}
         </div>
+
+        {isLastQuestion && selected ? (
+          <Link
+            to="/loading"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-wine px-5 py-4 text-base font-bold text-white shadow-soft transition hover:bg-wine/90 focus:outline-none focus:ring-4 focus:ring-gold/35"
+          >
+            결과 보기
+            <ChevronRight aria-hidden="true" size={20} />
+          </Link>
+        ) : null}
       </div>
 
       <div className="mt-auto">
@@ -92,11 +114,11 @@ export function QuestionPage() {
           </Link>
         ) : (
           <Link
-            to="/"
+            to="/situation"
             className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-cocoa/70 hover:text-wine"
           >
             <ArrowLeft aria-hidden="true" size={18} />
-            처음으로
+            상황으로 돌아가기
           </Link>
         )}
       </div>

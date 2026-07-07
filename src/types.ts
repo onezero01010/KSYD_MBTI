@@ -29,6 +29,7 @@ export interface Question {
   id: number;
   phase: 1 | 2 | 3;
   phaseTitle: string;
+  phaseSubtitle: string;
   dimension: Dimension;
   prompt: string;
   optionA: Option;
