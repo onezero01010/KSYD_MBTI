@@ -22,15 +22,6 @@ export function HomePage() {
         </div>
       </div>
 
-      <div className="rounded-lg border border-wine/15 bg-white/70 p-5 shadow-soft">
-        <div className="mb-5 flex items-center gap-4 text-5xl" aria-hidden="true">
-          <span>🏺</span>
-          <span>🍷</span>
-          <span>✨</span>
-        </div>
-        <p className="text-sm font-semibold text-cocoa/60">예상 소요 시간 약 2분</p>
-      </div>
-
       <div className="grid gap-3">
         <Link
           to="/situation"

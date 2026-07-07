@@ -56,9 +56,6 @@ export function QuestionPage() {
           <p className="text-sm font-black text-wine">
             Phase {question.phase}. {question.phaseTitle}
           </p>
-          <p className="text-sm leading-6 text-cocoa/65">
-            {question.phaseSubtitle}
-          </p>
         </div>
       </div>
 
