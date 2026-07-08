@@ -24,7 +24,7 @@ export const questions: Question[] = [
     phaseSubtitle: phases[1].subtitle,
     dimension: "EI",
     prompt:
-      "성모님이 당신을 카나 혼인잔치의 일꾼으로 초대하셨습니다. 성모님이 나를 초대한 이유는?",
+      "성모님께서 당신을 카나 혼인잔치의 일꾼으로 초대하셨습니다. 성모님께서 나를 초대하신 이유는?",
     optionA: {
       label: "A",
       text: "사람들과 금방 어울리고, 필요한 순간 분위기를 살리며 함께 움직일 수 있어서",
@@ -79,7 +79,7 @@ export const questions: Question[] = [
     phaseSubtitle: phases[1].subtitle,
     dimension: "SN",
     prompt:
-      "성모님과 예수님이 포도주가 없구나라고 이야기하시는 것을 듣게 되었습니다. 이때 당신의 반응은?",
+      "성모님께서 예수님께 포도주가 없구나라고 이야기하시는 것을 듣게 되었습니다. 이때 당신의 반응은?",
     optionA: {
       label: "A",
       text: "정말 포도주가 부족한지, 항아리나 잔은 얼마나 남았는지 상황을 확인하러 간다",
@@ -98,7 +98,7 @@ export const questions: Question[] = [
     phaseSubtitle: phases[2].subtitle,
     dimension: "TF",
     prompt:
-      "성모님이 일꾼들에게 그가 시키는 대로 하여라 하고 말씀하셨습니다. 당신의 첫 생각은?",
+      "성모님께서 일꾼들에게 그가 시키는 대로 하여라 하고 말씀하셨습니다. 당신의 첫 생각은?",
     optionA: {
       label: "A",
       text: "그가 누구시기에? 왜 그분의 말을 따라야 하지? 하며 이유와 상황을 먼저 이해하려 한다",
@@ -106,7 +106,7 @@ export const questions: Question[] = [
     },
     optionB: {
       label: "B",
-      text: "성모님이 그렇게 말씀하셨다면 믿고 따르겠다고 마음으로 받아들인다",
+      text: "성모님께서 그렇게 말씀하셨다면 믿고 따르겠다고 마음으로 받아들인다",
       pole: "F",
     },
   },
@@ -116,7 +116,7 @@ export const questions: Question[] = [
     phaseTitle: phases[2].title,
     phaseSubtitle: phases[2].subtitle,
     dimension: "JP",
-    prompt: "아직 예수님이 구체적인 지시를 하지 않으셨습니다. 당신은 어떻게 행동합니까?",
+    prompt: "아직 예수님께서 구체적인 지시를 하지 않으셨습니다. 당신은 어떻게 행동합니까?",
     optionA: {
       label: "A",
       text: "지금 내가 무엇을 하면 좋을지 먼저 생각하며 할 일을 분명히 하려 한다",
@@ -134,7 +134,7 @@ export const questions: Question[] = [
     phaseTitle: phases[2].title,
     phaseSubtitle: phases[2].subtitle,
     dimension: "SN",
-    prompt: "예수님이 항아리에 물을 채워라 하고 말씀하셨습니다. 그 말을 들은 당신의 머릿속은?",
+    prompt: "예수님께서 항아리에 물을 채워라 하고 말씀하셨습니다. 그 말을 들은 당신의 머릿속은?",
     optionA: {
       label: "A",
       text: "항아리가 몇 개지? 어디까지 채워야 하지? 정확히 확인한다",

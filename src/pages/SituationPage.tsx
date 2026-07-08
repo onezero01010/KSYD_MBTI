@@ -11,9 +11,9 @@ export function SituationPage() {
           카나의 혼인잔치가 당신을 기다립니다
         </p>
         <h1 className="mt-3 text-2xl font-black leading-tight text-cocoa sm:mt-4 sm:text-4xl">
-          성모님이 당신을
+          성모님께서 당신을
           <br />
-          잔치의 일꾼으로 부르셨어요
+          잔치의 일꾼으로 초대하셨어요
         </h1>
       </div>
 
