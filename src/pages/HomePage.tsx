@@ -11,7 +11,7 @@ export function HomePage() {
     <section className="flex flex-1 flex-col justify-center gap-5 sm:gap-8">
       <div className="space-y-4 sm:space-y-5">
         <p className="text-xs font-semibold text-wine sm:text-sm">
-          KSYD 2026 프로그램 3
+          제7회 KSYD | SYM, 우리는 신.봉.자!
         </p>
         <div className="space-y-3 sm:space-y-4">
           <h1 className="text-3xl font-black leading-tight text-cocoa sm:text-5xl">
